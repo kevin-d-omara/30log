@@ -35,15 +35,21 @@ luarocks install 30log
 
 ## Wiki
 
-A full documentation is available on the [wiki](https://github.com/Yonaba/30log/wiki). Find the project page at [yonaba.github.io/30log](gttp://yonaba.github.io/30log). 
+A full documentation is available on the [wiki](https://github.com/Yonaba/30log/wiki). Find the project page at [yonaba.github.io/30log](gttp://yonaba.github.io/30log).
 
 
 ## Class-Commons support
 
-[Class-Commons](https://github.com/bartbes/Class-Commons) is an interface which provides a common API for a wide range of Object Orientation libraries in Lua. There is a small plugin, originally written by [TsT](https://github.com/tst2005) 
+[Class-Commons](https://github.com/bartbes/Class-Commons) is an interface which provides a common API for a wide range of Object Orientation libraries in Lua. There is a small plugin, originally written by [TsT](https://github.com/tst2005)
 which provides compatibility between *30log* and *Class-commons*. <br/>
 See the module [30log-commons.lua](https://github.com/Yonaba/30log/blob/master/30log-commons.lua).
 
+## Tabletop Simulator support
+
+[Tabletop Simulator](http://berserk-games.com/tabletop-simulator/) is a physics based sandbox game designed for playing tabletop games. Tabletop Simulator offers scripting support in its own custom flavor of Lua: `ttslua`.
+It works differently than Lua in that it doesn't support `require` for referencing other Lua files, but instead has similar functionality using `#include`.
+The module [30log.ttslua](https://github.com/Yonaba/30log/blob/master/30log-commons.lua) allows you to use 30log in Tabletop Simulator mods.
+Simply include it in the root of your project files, and reference it at the top of your script by using `#include 30log`. Then you can use 30log through the variable `class`.
 
 ## Specs
 
@@ -62,7 +68,7 @@ For those who might be interested though, the file [30log-clean.lua](http://gith
 
 #### 30log-global.lua
 
-The file [30log-global.lua](http://github.com/Yonaba/30log/blob/master/30log-global.lua) features the exact same source as the original [30log.lua](http://github.com/Yonaba/30log/blob/master/30log.lua), 
+The file [30log-global.lua](http://github.com/Yonaba/30log/blob/master/30log-global.lua) features the exact same source as the original [30log.lua](http://github.com/Yonaba/30log/blob/master/30log.lua),
 excepts that it sets a global named `class`. This is convenient for Lua-based frameworks such as [Codea](http://twolivesleft.com/Codea/).
 
 
